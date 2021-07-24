@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+
+html,body{
+	background: #fff;
+	margin: 0 auto;
+	color:#5a5a5a;
+	font-size: 14px;
+	line-height: 1.6;
+}
+a,.slow{
+	transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
+}
+.slowa{
+	transition:all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-webkit-transition: all 0.3s ease-out 0s;
+}
+.hidden{
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;          /* for IE */
+	-o-text-overflow: ellipsis;      /* for Opera */
+	-icab-text-overflow: ellipsis;   /* for iCab */
+	-khtml-text-overflow: ellipsis;  /* for Konqueror Safari */
+	-moz-text-overflow: ellipsis;    /* for Firefox,mozilla */
+	-webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+}
+.hidd{
+	overflow: hidden;
+}
+
+.hidd1{overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 1; -webkit-box-orient: vertical;}
+.hidd2{overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.hidd3{overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+
+img{
+  vertical-align: top;
+  object-fit: cover; 
+  object-fit: contain;
+  object-fit: scale-down;
+  transition: all 0.5s;
+}
+/* loading 样式 */
+.loaderbg {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.loader {
+	width: 2.5em;
+	height: 2.5em;
+	transform: rotate(165deg);
+	z-index: 9999;
+	position: fixed;
+	top: calc(50% - 1.25em);
+	left: calc(50% - 1.25em);
+}
+.loader:before, .loader:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 0.25em;
+	transform: translate(-50%, -50%);
+}
+.loader:before {
+	animation: before 2s infinite;
+}
+.loader:after {
+	animation: after 2s infinite;
+}
+@keyframes before {
+  0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+  }
+  70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  100% {
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+}
+@keyframes after {
+  0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+  35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+  }
+  70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+  }
+  100% {
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+}
+
+.w_100-m1200{width: 100%;min-width: 1200px;display: inline-block;vertical-align: top;}
+.w_100{width: 100%;display: inline-block;vertical-align: top;}
+
+.flex_jc-sb{display: flex;justify-content: space-between;}
+
+.title{
+	position: relative;
+	display: flex;
+}
+.title p{
+	z-index: 2;
+	font-size: 32px;
+	color: #323232;
+}
+.title::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	bottom: 6px;
+	height: 6px;
+	background-color: #0c8fd3;
+}
+
+header .logo {
+	-webkit-animation: fadeInLeft 1.5s ease-in-out backwards;
+}
+header .head_r{
+	-webkit-animation: fadeInRight 1.5s ease-in-out backwards;
+}
+header{
+	/* width: 1200px; */
+	overflow: hidden;
+	/* height: 90px; */
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	color: #30318b;
+	background-color: #fff;
+	/* font-size: 24px; */
+}
+.head_r{
+	display: flex;
+}
+header span{
+	margin-left: 6px;
+}
+footer{
+	background-color: #212121;
+}
+footer .con{
+	color: #fff;
+	/* font-size: 14px; */
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}

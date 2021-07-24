@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>{dede:field.seotitle /}</title>
+	<meta name="keywords" content="{dede:field name='keywords'/}" />
+	<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+	{dede:include filename="head_css.htm"/}
+</head>
+
+<body>
+	{dede:include filename="head.htm"/}
+	{dede:include filename="ban_nav.htm"/}
+
+	<div id="main">
+
+		<div class="com_padB">
+			<div class="scm_padd padb_45">
+				<div class="sub_tt t_cen padt_35 padb_15">
+					<div class="h3 f_34 wow fadeInUp" data-wow-delay="0.2s">{dede:field.typename/}</div>
+				</div>
+				<div class="al_list">
+					<ul class="clearfloat wowlist4" data-am-widget="gallery" data-am-gallery="{pureview:{target: 'img'}}">
+						{dede:list titlelen='150' pagesize='12'}
+						<li class="wow fadeInUp"><a title="[field:title function='html2text(@me)'/]">
+								<div class="img"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]" /></div>
+								<div class="p hidden f_16">[field:title function='html2text(@me)'/]</div>
+							</a></li>
+						{/dede:list}
+					</ul>
+				</div>
+				<div class="pages">
+					<ul>{dede:pagelist listitem="pre,next,pageno" listsize="5"/}</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	{dede:include filename="footer.htm"/}
+	<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/css-com/css/amazeui.min.css">
+	<script src="{dede:global.cfg_cmspath/}/css-com/js/amazeui2.js"></script>
+</body>
+
+</html>
